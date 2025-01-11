@@ -1,0 +1,92 @@
+:root {
+    /* 主题色调 */
+    --bg-primary: #141414;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --accent-peach: #F6B195;
+    --accent-blue: #9DCEFF;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* 默认主题 */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.navbar {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-peach);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.theme-toggle .dark-icon {
+    display: none;
+}
+
+/* 深色主题 */
+body.dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-theme .navbar {
+    background-color: var(--nav-bg-dark);
+}
+
+body.dark-theme .nav-links a {
+    color: var(--text-dark);
+}
+
+body.dark-theme .nav-links a:hover,
+body.dark-theme .nav-links a.active {
+    color: var(--primary-dark);
+}
+
+body.dark-theme .theme-toggle .light-icon {
+    display: none;
+}
+
+body.dark-theme .theme-toggle .dark-icon {
+    display: inline;
+}
+
+/* 社交媒体链接样式 */
+.social-link.bilibili {
+    background-color: rgba(251, 114, 153, 0.1);
+    color: #FB7299;
+}
+
+.social-link.douyin {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+.social-link.xiaohongshu {
+    background-color: rgba(254, 44, 85, 0.1);
+    color: #FE2C55;
+}
+
+body.dark-theme .social-link.douyin {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+} 

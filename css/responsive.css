@@ -1,0 +1,68 @@
+/* 移动端样式 (< 768px) */
+@media (max-width: 767px) {
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--bg-light);
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid var(--secondary-light);
+    }
+
+    body.dark-theme .nav-links {
+        background: var(--bg-dark);
+        border-top-color: var(--secondary-dark);
+    }
+
+    .hero {
+        padding: 1rem;
+        padding-top: calc(var(--navbar-height) + 1rem);
+        padding-bottom: 4rem; /* 为底部导航留出空间 */
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* 平板样式 (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero {
+        padding: 2rem;
+        padding-top: calc(var(--navbar-height) + 2rem);
+    }
+}
+
+/* 桌面端样式 (>= 1024px) */
+@media (min-width: 1024px) {
+    .nav-container {
+        padding: 0 2rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .hero {
+        padding: 3rem;
+        padding-top: calc(var(--navbar-height) + 3rem);
+    }
+} 

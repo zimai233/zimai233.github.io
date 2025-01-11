@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影作品 | 个人作品集</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/photography.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-camera-retro"></i>
+                我的作品集
+            </div>
+            <div class="nav-links">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="resume.html">
+                    <i class="fas fa-user-tie"></i>
+                    <span>简历</span>
+                </a>
+                <a href="projects.html">
+                    <i class="fas fa-code"></i>
+                    <span>项目</span>
+                </a>
+                <a href="photography.html" class="active">
+                    <i class="fas fa-camera"></i>
+                    <span>摄影</span>
+                </a>
+                <div class="language-switch">
+                    <button class="language-btn" id="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="language-menu" id="language-menu">
+                        <div class="language-option" data-lang="zh">中文</div>
+                        <div class="language-option" data-lang="en">English</div>
+                        <div class="language-option" data-lang="ja">日本語</div>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="photography-container">
+        <div class="photography-header">
+            <h1>摄影作品集</h1>
+            <div class="photo-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="portrait">人像</button>
+                <button class="filter-btn" data-filter="landscape">风景</button>
+                <button class="filter-btn" data-filter="street">街拍</button>
+            </div>
+        </div>
+
+        <div class="photo-grid">
+            <!-- 人像摄影 -->
+            <div class="photo-item" data-category="portrait">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80" alt="人像摄影作品1">
+                <div class="photo-overlay">
+                    <h3>光影之美</h3>
+                    <p>自然光人像摄影</p>
+                </div>
+            </div>
+
+            <div class="photo-item" data-category="portrait">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&auto=format&fit=crop&q=80" alt="人像摄影作品2">
+                <div class="photo-overlay">
+                    <h3>城市故事</h3>
+                    <p>街头人像摄影</p>
+                </div>
+            </div>
+
+            <!-- 风景摄影 -->
+            <div class="photo-item" data-category="landscape">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=80" alt="风景摄影作品1">
+                <div class="photo-overlay">
+                    <h3>晨光初现</h3>
+                    <p>自然风光摄影</p>
+                </div>
+            </div>
+
+            <div class="photo-item" data-category="landscape">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=80" alt="风景摄影作品2">
+                <div class="photo-overlay">
+                    <h3>山川之巅</h3>
+                    <p>高山风光摄影</p>
+                </div>
+            </div>
+
+            <!-- 街拍摄影 -->
+            <div class="photo-item" data-category="street">
+                <img src="https://images.unsplash.com/photo-1445023086979-7244a12345a8?w=800&auto=format&fit=crop&q=80" alt="街拍作品1">
+                <div class="photo-overlay">
+                    <h3>城市瞬间</h3>
+                    <p>街头纪实摄影</p>
+                </div>
+            </div>
+
+            <div class="photo-item" data-category="street">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&auto=format&fit=crop&q=80" alt="街拍作品2">
+                <div class="photo-overlay">
+                    <h3>都市剪影</h3>
+                    <p>城市街头摄影</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 个人作品集. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/photography.js"></script>
+</body>
+</html> 
