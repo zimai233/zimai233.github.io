@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 2rem 1rem;
     padding-top: calc(var(--navbar-height) + 2rem);
+    padding-bottom: calc(var(--navbar-height) + 2rem);
 }
 
 .projects-header {
@@ -19,52 +20,16 @@
 }
 
 .filter-btn {
-    padding: 0.5rem 1.5rem;
-    border: none;
-    background: var(--card-bg-light);
-    color: var(--text-light);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-body.dark-theme .filter-btn {
-    background: var(--card-bg-dark);
-    color: var(--text-dark);
-}
-
-.filter-btn.active {
-    background: var(--primary-light);
-    color: white;
-}
-
-body.dark-theme .filter-btn.active {
-    background: var(--primary-dark);
+    composes: btn btn-primary from global;
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    composes: grid grid-auto from global;
     padding: 1rem 0;
 }
 
 .project-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-body.dark-theme .project-card {
-    background: var(--card-bg-dark);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    background: var(--hover-bg);
+    composes: card from global;
 }
 
 .project-preview {

@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 2rem 1rem;
     padding-top: calc(var(--navbar-height) + 2rem);
+    padding-bottom: calc(var(--navbar-height) + 2rem);
 }
 
 .photography-header {
@@ -19,35 +20,11 @@
 }
 
 .filter-btn {
-    padding: 0.5rem 1.5rem;
-    border: none;
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-secondary);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-body.dark-theme .filter-btn {
-    background: var(--card-bg-dark);
-    color: var(--text-dark);
-}
-
-.filter-btn.active {
-    background: rgba(246, 177, 149, 0.2);
-    color: var(--accent-peach);
-    border-color: var(--accent-peach);
-}
-
-body.dark-theme .filter-btn.active {
-    background: var(--primary-dark);
+    composes: btn btn-primary from global;
 }
 
 .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    composes: grid grid-auto from global;
     padding: 1rem 0;
 }
 

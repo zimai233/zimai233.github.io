@@ -193,7 +193,7 @@
         transform: translateY(-2px);
     }
 
-    .nav-links {
+    .bottom-nav {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -206,9 +206,47 @@
         z-index: 1000;
     }
 
-    body.dark-theme .nav-links {
+    .bottom-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+        text-decoration: none;
+    }
+
+    .bottom-nav a i {
+        font-size: 1.2rem;
+    }
+
+    .bottom-nav a.active {
+        color: var(--accent-peach);
+    }
+
+    body.dark-theme .bottom-nav {
         background: var(--bg-dark);
         border-top-color: var(--secondary-dark);
+    }
+
+    /* 保持原有侧边导航栏功能 */
+    .navbar .nav-links {
+        display: none;
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--bg-light);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem;
+        z-index: 999;
+        overflow-y: auto;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .hero {

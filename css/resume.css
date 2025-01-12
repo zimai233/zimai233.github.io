@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 2rem 1rem;
     padding-top: calc(var(--navbar-height) + 2rem);
+    padding-bottom: calc(var(--navbar-height) + 2rem);
 }
 
 .resume-header {
