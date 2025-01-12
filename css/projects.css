@@ -20,16 +20,45 @@
 }
 
 .filter-btn {
-    composes: btn btn-primary from global;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color: var(--accent-peach);
+    background: rgba(246, 177, 149, 0.1);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    color: var(--accent-peach);
+    background: rgba(246, 177, 149, 0.2);
+    font-weight: 500;
+    border: 1px solid var(--accent-peach);
+    box-shadow: 0 2px 8px rgba(246, 177, 149, 0.2);
 }
 
 .projects-grid {
-    composes: grid grid-auto from global;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     padding: 1rem 0;
 }
 
 .project-card {
-    composes: card from global;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .project-preview {

@@ -19,20 +19,33 @@
             <div class="nav-links">
                 <a href="index.html">
                     <i class="fas fa-home"></i>
-                    <span>首页</span>
+                    <span data-i18n="nav.home">首页</span>
                 </a>
                 <a href="resume.html">
                     <i class="fas fa-user-tie"></i>
-                    <span>简历</span>
+                    <span data-i18n="nav.resume">简历</span>
                 </a>
                 <a href="projects.html" class="active">
                     <i class="fas fa-code"></i>
-                    <span>项目</span>
+                    <span data-i18n="nav.projects">项目</span>
                 </a>
                 <a href="photography.html">
                     <i class="fas fa-camera"></i>
-                    <span>摄影</span>
+                    <span data-i18n="nav.photography">摄影</span>
                 </a>
+                <div class="language-switch">
+                    <button class="language-btn" id="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="language-menu" id="language-menu">
+                        <div class="language-option" data-lang="zh">中文</div>
+                        <div class="language-option" data-lang="en">English</div>
+                        <div class="language-option" data-lang="ja">日本語</div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-language-switch">
                 <div class="language-switch">
                     <button class="language-btn" id="language-btn">
                         <i class="fas fa-globe"></i>
@@ -191,7 +204,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
     <script src="js/projects.js"></script>
 </body>
 </html> 

@@ -19,20 +19,33 @@
             <div class="nav-links">
                 <a href="index.html">
                     <i class="fas fa-home"></i>
-                    <span>首页</span>
+                    <span data-i18n="nav.home">首页</span>
                 </a>
                 <a href="resume.html">
                     <i class="fas fa-user-tie"></i>
-                    <span>简历</span>
+                    <span data-i18n="nav.resume">简历</span>
                 </a>
                 <a href="projects.html">
                     <i class="fas fa-code"></i>
-                    <span>项目</span>
+                    <span data-i18n="nav.projects">项目</span>
                 </a>
                 <a href="photography.html" class="active">
                     <i class="fas fa-camera"></i>
-                    <span>摄影</span>
+                    <span data-i18n="nav.photography">摄影</span>
                 </a>
+                <div class="language-switch">
+                    <button class="language-btn" id="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="language-menu" id="language-menu">
+                        <div class="language-option" data-lang="zh">中文</div>
+                        <div class="language-option" data-lang="en">English</div>
+                        <div class="language-option" data-lang="ja">日本語</div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-language-switch">
                 <div class="language-switch">
                     <button class="language-btn" id="language-btn">
                         <i class="fas fa-globe"></i>
@@ -62,52 +75,36 @@
         <div class="photo-grid">
             <!-- 人像摄影 -->
             <div class="photo-item" data-category="portrait">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80" alt="人像摄影作品1">
+                <img src="./images/樱花季.png" alt="武汉大学樱花季人像">
                 <div class="photo-overlay">
-                    <h3>光影之美</h3>
-                    <p>自然光人像摄影</p>
-                </div>
-            </div>
-
-            <div class="photo-item" data-category="portrait">
-                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&auto=format&fit=crop&q=80" alt="人像摄影作品2">
-                <div class="photo-overlay">
-                    <h3>城市故事</h3>
-                    <p>街头人像摄影</p>
+                    <h3>樱花季</h3>
+                    <p>武汉大学 | 2024.03.15</p>
                 </div>
             </div>
 
             <!-- 风景摄影 -->
             <div class="photo-item" data-category="landscape">
-                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=80" alt="风景摄影作品1">
+                <img src="./images/黄鹤楼夜景.png" alt="黄鹤楼夜景">
                 <div class="photo-overlay">
-                    <h3>晨光初现</h3>
-                    <p>自然风光摄影</p>
-                </div>
-            </div>
-
-            <div class="photo-item" data-category="landscape">
-                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=80" alt="风景摄影作品2">
-                <div class="photo-overlay">
-                    <h3>山川之巅</h3>
-                    <p>高山风光摄影</p>
+                    <h3>黄鹤楼夜景</h3>
+                    <p>武昌区 | 2024.01.20</p>
                 </div>
             </div>
 
             <!-- 街拍摄影 -->
             <div class="photo-item" data-category="street">
-                <img src="https://images.unsplash.com/photo-1445023086979-7244a12345a8?w=800&auto=format&fit=crop&q=80" alt="街拍作品1">
+                <img src="./images/江汉路.png" alt="江汉路街景">
                 <div class="photo-overlay">
-                    <h3>城市瞬间</h3>
-                    <p>街头纪实摄影</p>
+                    <h3>江汉路</h3>
+                    <p>江汉区 | 2024.02.05</p>
                 </div>
             </div>
 
-            <div class="photo-item" data-category="street">
-                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&auto=format&fit=crop&q=80" alt="街拍作品2">
+            <div class="photo-item" data-category="landscape">
+                <img src="./images/秋天的东湖绿道.png" alt="东湖绿道秋景">
                 <div class="photo-overlay">
-                    <h3>都市剪影</h3>
-                    <p>城市街头摄影</p>
+                    <h3>秋天的东湖</h3>
+                    <p>武昌区 | 2024.10.15</p>
                 </div>
             </div>
         </div>
@@ -137,7 +134,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
     <script src="js/photography.js"></script>
 </body>
 </html> 
