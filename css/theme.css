@@ -32,43 +32,6 @@ body {
     color: var(--accent-peach);
 }
 
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.theme-toggle .dark-icon {
-    display: none;
-}
-
-/* 深色主题 */
-body.dark-theme {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-}
-
-body.dark-theme .navbar {
-    background-color: var(--nav-bg-dark);
-}
-
-body.dark-theme .nav-links a {
-    color: var(--text-dark);
-}
-
-body.dark-theme .nav-links a:hover,
-body.dark-theme .nav-links a.active {
-    color: var(--primary-dark);
-}
-
-body.dark-theme .theme-toggle .light-icon {
-    display: none;
-}
-
-body.dark-theme .theme-toggle .dark-icon {
-    display: inline;
-}
 
 /* 社交媒体链接样式 */
 .social-link.bilibili {

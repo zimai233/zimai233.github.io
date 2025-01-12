@@ -22,10 +22,11 @@ body {
     left: 0;
     right: 0;
     height: var(--navbar-height);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(20, 20, 20, 0.8);
+    background: rgba(20, 20, 20, 0.9);
+    transition: all 0.3s ease;
 }
 
 .nav-container {
@@ -38,26 +39,30 @@ body {
     align-items: center;
 }
 
+/* 主内容区域样式 */
 .hero {
-    min-height: 100vh;
-    padding-top: var(--navbar-height);
+    min-height: 100vh; /* 最小高度为视口高度 */
+    padding-top: var(--navbar-height); /* 顶部留出导航栏高度 */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    text-align: center; /* 文字居中 */
+    gap: 2rem; /* 子元素间距 */
+    padding: 2rem; /* 内边距 */
+    padding-top: calc(var(--navbar-height) + 2rem); /* 顶部内边距 */
+    margin-bottom: 2rem; /* 底部外边距 */
 }
 
 .avatar {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 35%;
+    object-position: 50% 50%;
     transition: transform 0.3s ease;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    left: auto;
+    transform: none;
 }
 
 .social-links {
@@ -123,28 +128,32 @@ body {
     border-radius: var(--border-radius);
     transition: all 0.3s ease;
     font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
 .nav-links a:hover {
-    background: var(--hover-bg);
+    background: rgba(246, 177, 149, 0.1);
+    color: var(--accent-peach);
     transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links a.active {
-    background: rgba(246, 177, 149, 0.1);
+    background: rgba(246, 177, 149, 0.2);
     color: var(--accent-peach);
     border: 1px solid var(--accent-peach);
+    box-shadow: 0 2px 8px rgba(246, 177, 149, 0.2);
 }
 
 .avatar-container {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
     border: 3px solid var(--accent-peach);
     box-shadow: 0 0 20px rgba(246, 177, 149, 0.2);
 }
@@ -164,12 +173,12 @@ body {
 }
 
 .avatar-container:hover {
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 25px rgba(157, 206, 255, 0.25);
+    border-color: white;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
 }
 
 .avatar-container:hover .avatar {
-    transform: translateX(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 
 /* 社交媒体卡片样式 */
@@ -271,7 +280,51 @@ body.dark-theme .social-link:hover {
     .profile-description .details {
         font-size: 0.9rem;
     }
-} 
+    
+    .avatar-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .avatar {
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .nav-container {
+        position: relative;
+    }
+
+    /* 移动端导航栏样式 */
+    .nav-links {
+        position: fixed;
+        top: var(--navbar-height);
+        right: -100%;
+        height: calc(100vh - var(--navbar-height));
+        width: 280px;
+        flex-direction: column;
+        background: rgba(20, 20, 20, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 1.5rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -4px 0 16px rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+    
+    .nav-links.active {
+        right: 0;
+        display: flex;
+    }
+
+
+    .nav-links a {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: var(--border-radius);
+        margin: 0.25rem 0;
+        font-size: 1rem;
+    }
+}
 
 /* 语言切换 */
 .language-switch {
@@ -342,29 +395,6 @@ body.dark-theme .social-link:hover {
     font-weight: 600;
 }
 
-/* 亮色模式适配 */
-body:not(.dark-theme) .theme-toggle,
-body:not(.dark-theme) .language-btn {
-    border-color: var(--accent-peach);
-    color: var(--accent-peach);
-}
-
-body:not(.dark-theme) .language-menu {
-    background: rgba(255, 255, 255, 0.9);
-    border-color: var(--accent-peach);
-    box-shadow: 0 4px 20px rgba(246, 177, 149, 0.2);
-}
-
-body:not(.dark-theme) .language-option {
-    color: #333;
-    font-weight: 500;
-}
-
-body:not(.dark-theme) .language-option:hover {
-    color: var(--accent-peach);
-    font-weight: 600;
-}
-
 /* 当前选中的语言选项 */
 .language-option[data-lang="${currentLang}"] {
     background: rgba(246, 177, 149, 0.1);
@@ -384,4 +414,4 @@ body:not(.dark-theme) .language-option:hover {
     border-left: 1px solid var(--accent-peach);
     border-top: 1px solid var(--accent-peach);
     transform: rotate(45deg);
-} 
+}
