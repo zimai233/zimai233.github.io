@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历 | Wheat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/resume.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                Wheat
+            </div>
+            <div class="nav-links">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav.home">首页</span>
+                </a>
+                <a href="resume.html" class="active">
+                    <i class="fas fa-user-tie"></i>
+                    <span data-i18n="nav.resume">简历</span>
+                </a>
+                <a href="projects.html">
+                    <i class="fas fa-code"></i>
+                    <span data-i18n="nav.projects">项目</span>
+                </a>
+                <a href="photography.html">
+                    <i class="fas fa-camera"></i>
+                    <span data-i18n="nav.photography">摄影</span>
+                </a>
+                <div class="language-switch">
+                    <button class="language-btn" id="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="language-menu" id="language-menu">
+                        <div class="language-option" data-lang="zh">中文</div>
+                        <div class="language-option" data-lang="en">English</div>
+                        <div class="language-option" data-lang="ja">日本語</div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-language-switch">
+                <div class="language-switch">
+                    <button class="language-btn" id="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="language-menu" id="language-menu">
+                        <div class="language-option" data-lang="zh">中文</div>
+                        <div class="language-option" data-lang="en">English</div>
+                        <div class="language-option" data-lang="ja">日本語</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="resume-container">
+        <div class="resume-header">
+            <h1 data-i18n="resume.title">个人简历</h1>
+            <a href="javascript:void(0)" onclick="alert('这里可以下载PDF')" class="download-btn">
+                <i class="fas fa-download"></i>
+                <span data-i18n="resume.download">下载PDF版本</span>
+            </a>
+        </div>
+
+        <section class="resume-section">
+            <h2><i class="fas fa-user"></i> <span data-i18n="resume.basicInfo">基本信息</span></h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>姓名：</strong> 陈鹏
+                </div>
+                <div class="info-item">
+                    <strong>年龄：</strong> 23岁
+                </div>
+                <div class="info-item">
+                    <strong>籍贯：</strong> 武汉
+                </div>
+                <div class="info-item">
+                    <strong>电话：</strong> 187xxxxxxxx
+                </div>
+                <div class="info-item">
+                    <strong>邮箱：</strong> 187xxxxxxxx@163.com
+                </div>
+                <div class="info-item">
+                    <strong>职位：</strong> UI设计师
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><i class="fas fa-star"></i> <span data-i18n="resume.advantages">个人优势</span></h2>
+            <div class="advantages">
+                <div class="advantage-item">
+                    <p>1. 市场洞察：紧跟行业趋势，为产品和市场策略提供创新指导。</p>
+                </div>
+                <div class="advantage-item">
+                    <p>2. AI工具运用：熟练应用AI工具，提高工作效率和项目交付。</p>
+                </div>
+                <div class="advantage-item">
+                    <p>3. 设计流程：优化流程，提升团队协作和设计效率。</p>
+                </div>
+                <div class="advantage-item">
+                    <p>4. 设计技能：熟练使用Figma/Mastergo/PS/Ai/CorelDRAW/蓝湖/犀牛/等主流设计工具，确保高效创意实现。</p>
+                </div>
+                <div class="advantage-item">
+                    <p>5. 执行力：快速完成任务，确保项目按时交付，提升满意度。</p>
+                </div>
+                <div class="advantage-item">
+                    <p>6. 自媒体营销：有效运营自媒体，增强品牌影响力。</p>
+                </div>
+                <div class="advantage-item">
+                    <p>7. 问题解决：梳理难点，提出解决方案，促进团队知识共享。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><i class="fas fa-briefcase"></i> <span data-i18n="resume.experience">工作经历</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024.06-至今</div>
+                    <div class="timeline-content">
+                        <h3>深圳市xxxxx科技有限公司</h3>
+                        <p class="job-title">UI设计师</p>
+                        <ul>
+                            <li>实施难点识别与解决策略，通过量化分析，将团队问题解决效率提升20%。</li>
+                            <li>规划产品视觉与交互设计流程，确保从概念到实施的每个环节均符合用户体验最佳实践。</li>
+                            <li>优化功能规划流程，针对核心功能实施用户研究，促进产品设计与市场需求度匹配合，用户满意度提升30%。</li>
+                            <li>开展竞品分析，提炼并实施设计优化措施，使部门设计作品在行业内获得显著认可，提升品牌影响力。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><i class="fas fa-project-diagram"></i> <span data-i18n="resume.projects">项目经历</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024.06-至今</div>
+                    <div class="timeline-content">
+                        <h3>解压柠小橙（C端Watch端-健康管理类App）</h3>
+                        <p class="job-title">UI设计师</p>
+                        <p>解压柠小橙，自2024年9月20日发布以来，我们的App已在App Store获得五星好评，截至目前健康类美排行榜上游身前21名，智能压力管理优化，专为追求健康生活的年轻人群设计。</p>
+                        <h4>业绩：</h4>
+                        <ul>
+                            <li>1.项目视觉与交互规划反馈</li>
+                            <li>主导项目的视觉与交互规划，成功实现了用户界面(UI)和用户体验(UX)的优化，使得产品界面更加直观易用。</li>
+                            <li>2.竞品视觉交互解分析</li>
+                            <li>通过深入的竞品视觉交互解分析，提炼出关键的设计趋势和用户偏好，将这些洞察应用于产品迭代中。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2023.05-2024.05</div>
+                    <div class="timeline-content">
+                        <h3>你的课表（C端-校园社交工具App）</h3>
+                        <p class="job-title">UI设计师</p>
+                        <p>你的课表app定位为一个面向大学生校园生活助手，以查询课表表和考试成绩、社交交流、知识付费学习等为主要功能。设计主要是针对视觉层面，从视觉层面去设计计划增强用户的使用黏性。校园是充满青春活力，积极阳光向上的。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><i class="fas fa-graduation-cap"></i> <span data-i18n="resume.education">教育经历</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023-2025</div>
+                    <div class="timeline-content">
+                        <h3>武汉工程科技学院</h3>
+                        <p>本科 | 产品设计</p>
+                        <ul>
+                            <li>参加设计比赛多次，获得过多个奖项，锻炼了自己的设计思维和创新能力。</li>
+                            <li>学科成绩优异，多次被评为学院优秀学生，表现出优秀的学习能力和自我管理能力。</li>
+                            <li>参与校园项目多次，担任过班长、策划等职位，锻炼了自己的团队合作和沟通能力。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="bottom-nav">
+        <a href="index.html">
+            <i class="fas fa-home"></i>
+            <span data-i18n="nav.home">首页</span>
+        </a>
+        <a href="resume.html" class="active">
+            <i class="fas fa-user-tie"></i>
+            <span data-i18n="nav.resume">简历</span>
+        </a>
+        <a href="projects.html">
+            <i class="fas fa-code"></i>
+            <span data-i18n="nav.projects">项目</span>
+        </a>
+        <a href="photography.html">
+            <i class="fas fa-camera"></i>
+            <span data-i18n="nav.photography">摄影</span>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wheat. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

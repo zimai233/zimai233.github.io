@@ -1,0 +1,175 @@
+.photography-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    padding-top: calc(var(--navbar-height) + 2rem);
+    padding-bottom: calc(var(--navbar-height) + 2rem);
+}
+
+.photography-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.photo-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color: var(--accent-peach);
+    background: rgba(246, 177, 149, 0.1);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    color: var(--accent-peach);
+    background: rgba(246, 177, 149, 0.2);
+    font-weight: 500;
+    border: 1px solid var(--accent-peach);
+    box-shadow: 0 2px 8px rgba(246, 177, 149, 0.2);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.photo-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to top,
+        rgba(20, 20, 20, 0.9),
+        transparent
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-overlay h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.photo-overlay p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.photo-overlay p::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-peach);
+    border-radius: 50%;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .photo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .photo-item {
+        flex: 0 0 calc(50% - 0.25rem);
+        margin-bottom: 0.5rem;
+        aspect-ratio: 3/4;
+        border-radius: 8px;
+    }
+
+    .photo-filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .photo-overlay {
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 50%
+        );
+        opacity: 1;
+    }
+
+    .photo-overlay h3 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .photo-overlay p {
+        font-size: 0.8rem;
+    }
+}
+
+/* 确保图片填充容器 */
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+/* 优化移动端触摸体验 */
+@media (hover: none) {
+    .photo-overlay {
+        opacity: 1;
+    }
+} 

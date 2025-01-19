@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目展示 | 个人作品集</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                Wheat
+            </div>
+            <div class="nav-links">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav.home">首页</span>
+                </a>
+                <a href="resume.html">
+                    <i class="fas fa-user-tie"></i>
+                    <span data-i18n="nav.resume">简历</span>
+                </a>
+                <a href="projects.html" class="active">
+                    <i class="fas fa-code"></i>
+                    <span data-i18n="nav.projects">项目</span>
+                </a>
+                <a href="photography.html">
+                    <i class="fas fa-camera"></i>
+                    <span data-i18n="nav.photography">摄影</span>
+                </a>
+                <div class="language-switch">
+                    <button class="language-btn" id="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="language-menu" id="language-menu">
+                        <div class="language-option" data-lang="zh">中文</div>
+                        <div class="language-option" data-lang="en">English</div>
+                        <div class="language-option" data-lang="ja">日本語</div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-language-switch">
+                <div class="language-switch">
+                    <button class="language-btn" id="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="language-menu" id="language-menu">
+                        <div class="language-option" data-lang="zh">中文</div>
+                        <div class="language-option" data-lang="en">English</div>
+                        <div class="language-option" data-lang="ja">日本語</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="projects-container">
+        <div class="projects-header">
+            <h1>UI设计项目</h1>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="app">App设计</button>
+                <button class="filter-btn" data-filter="web">网页设计</button>
+                <button class="filter-btn" data-filter="brand">品牌设计</button>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <!-- 项目卡片1 -->
+            <article class="project-card" data-category="app">
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop&q=80" alt="旅行App设计">
+                    <div class="project-overlay">
+                        <a href="#" class="view-project">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>旅行App设计</h3>
+                    <p>一款面向年轻人的旅行规划应用</p>
+                    <div class="project-tags">
+                        <span class="tag">UI设计</span>
+                        <span class="tag">交互设计</span>
+                        <span class="tag">Figma</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 项目卡片2 -->
+            <article class="project-card" data-category="app">
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=800&auto=format&fit=crop&q=80" alt="健康管理App">
+                    <div class="project-overlay">
+                        <a href="#" class="view-project">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>健康管理App</h3>
+                    <p>智能健康数据追踪与管理平台</p>
+                    <div class="project-tags">
+                        <span class="tag">UI设计</span>
+                        <span class="tag">用户研究</span>
+                        <span class="tag">Sketch</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 项目卡片3 -->
+            <article class="project-card" data-category="web">
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80" alt="电商平台设计">
+                    <div class="project-overlay">
+                        <a href="#" class="view-project">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>电商平台设计</h3>
+                    <p>现代化电商网站的UI/UX设计</p>
+                    <div class="project-tags">
+                        <span class="tag">网页设计</span>
+                        <span class="tag">响应式</span>
+                        <span class="tag">Adobe XD</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 新增项目卡片4 -->
+            <article class="project-card" data-category="app">
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?w=800&auto=format&fit=crop&q=80" alt="音乐App设计">
+                    <div class="project-overlay">
+                        <a href="#" class="view-project">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>音乐App设计</h3>
+                    <p>沉浸式音乐播放器体验设计</p>
+                    <div class="project-tags">
+                        <span class="tag">UI设计</span>
+                        <span class="tag">动效设计</span>
+                        <span class="tag">Principle</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 新增项目卡片5 -->
+            <article class="project-card" data-category="brand">
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop&q=80" alt="品牌识别设计">
+                    <div class="project-overlay">
+                        <a href="#" class="view-project">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>品牌识别设计</h3>
+                    <p>科技公司整体品牌形象设计</p>
+                    <div class="project-tags">
+                        <span class="tag">品牌设计</span>
+                        <span class="tag">VI设计</span>
+                        <span class="tag">Illustrator</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div class="bottom-nav">
+        <a href="index.html">
+            <i class="fas fa-home"></i>
+            <span data-i18n="nav.home">首页</span>
+        </a>
+        <a href="resume.html">
+            <i class="fas fa-user-tie"></i>
+            <span data-i18n="nav.resume">简历</span>
+        </a>
+        <a href="projects.html" class="active">
+            <i class="fas fa-code"></i>
+            <span data-i18n="nav.projects">项目</span>
+        </a>
+        <a href="photography.html">
+            <i class="fas fa-camera"></i>
+            <span data-i18n="nav.photography">摄影</span>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wheat. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html> 

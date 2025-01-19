@@ -1,0 +1,17 @@
+portfolio-website/
+├── index.html
+├── resume.html
+├── projects.html
+├── photography.html
+├── css/
+│   ├── style.css
+│   ├── theme.css
+│   └── responsive.css
+├── js/
+│   ├── main.js
+│   ├── theme.js
+│   └── gallery.js
+└── images/
+    ├── avatar/
+    ├── projects/
+    └── photography/ 
